@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Project 1</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+    <body>
+            <nav class="navbar navbar-dark bg-primary">
+                    <a class="navbar-brand" href="#" style=font-size:40px>Budget Market</a>
+                  </nav>
+        <div class="container">
+            
+                
+            <br>
+            <div class="row justify-content-center  ">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            Income
+                        </div>
+                        <div class="card-body" style='height:200px;'>
+                            <div class="form-group">
+                            <label for=income>What is your monthly income?</label>
+                            <input type=text placeholder='$...' id=income class=form-control>
+                        </div>
+                            
+                        </div>
+                    </div> 
+                    <div class="card"  style='margin-top:10px'>
+                        <div class="card-header">
+                            Remaining Balance
+                        </div>
+                        <div class="card-body" style='height:80px;''>
+                            You have $56757 left this month
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            Expenses
+                        </div>
+                        <div class="card-body" style='height:340px;'>
+                            <div class="form-group">
+                            <label for=expenses>What are some of your monthly expenses?</label>
+                            <select id=expenses class='form-control'>
+                                <option> Car Insurance</option>
+                                <option>Phone Bill</option>
+                                <option>Rent</option>
+                                <option>Other</option>
+                            </select>
+                            <label for=amount>Amount: </label>
+                            <input id=amount placeholder=$40 class=form-control>
+                        </div>
+                           
+                            <ul>
+                                <li>Phone Bill - $40</li>
+                                <li>Internet Bill - $100</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-header">
+                            Currency Exchange
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                            <label for=startAmount>From: <select class=form-control>
+                                <option selected>$</option>
+                                <option>€</option>
+                                <option>£</option>
+                            </select>
+                        </label>
+                            <input id=startAmount type=text placeholder=100 class=form-control>
+                            <label for=endType>To: </label>
+                            <select id=endType class=form-control>
+                                <option>$</option>
+                                <option selected>€</option>
+                                <option>£</option>
+                            </select>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Stock Market
+                        </div>
+                        <div class="card-body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
