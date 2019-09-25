@@ -2,8 +2,10 @@
     <head>
         <title>Fudge It Budget</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel=stylesheet href=assets\css\style.css>
     </head>
     <body>
+        <script src=http://code.jquery.com/jquery-3.4.1.js></script>
             <nav class="navbar navbar-dark bg-primary">
                     <a class="navbar-brand" href="#" style=font-size:40px>Fudge It Budget</a>
                   </nav>
@@ -20,13 +22,13 @@
                         <div class="card-body" style='height:200px;'>
                             <div class="form-group">
                             <label for=income>What is your monthly income?</label>
-                            <input type=text placeholder='...' id=income class=form-control>
+                            <input type=text placeholder='...' id=income class=form-control onkeyup="setIncome()">
                             <label for=frequency>How often do you get paid?</label>
-                            <select id=frequency class=form-control>
-                                <option>Weekly</option>
-                                <option selected>Biweekly</option>
-                                <option>Semi-monthly</option>
-                                <option>Monthly</option>
+                            <select id=frequency class=form-control onchange="setIncome()">
+                                <option value=4.34524>Weekly</option>
+                                <option selected value=2.17262>Biweekly</option>
+                                <option value=2>Semi-monthly</option>
+                                <option value=1>Monthly</option>
                             </select>
                         </div>
                             
@@ -36,8 +38,8 @@
                         <div class="card-header">
                             Remaining Balance
                         </div>
-                        <div class="card-body" style='height:80px;''>
-                            You have $56757 left this month
+                        <div class="card-body" style='height:80px;' id=moneyLeft>
+                           
                         </div>
                     </div> 
                 </div>
@@ -48,24 +50,24 @@
                         </div>
                         <div class="card-body" style='height:340px;'>
                             <div class="form-group">
-                            <label for=expenses>What are some of your monthly expenses?</label>
-                            <select id=expenses class='form-control'>
-                                <option>Car Insurance</option>
-                                <option>Phone Bill</option>
-                                <option>Rent</option>
-                                <option>Electricity</option>
-                                <option>Water</option>
-                                <option>Cable/Internet</option>
-                                <option>Other</option>
-                            </select>
-                            <label for=amount>Amount: </label>
-                            <input id=amount placeholder=$0.00 class=form-control>
-                        </div>
-                           
-                            <ul>
-                                <li>Phone Bill - $40</li>
-                                <li>Internet Bill - $100</li>
-                            </ul>
+                                <label for=expenses>What are some of your monthly expenses?</label>
+                                <select id=expenses class='form-control' onchange="otherExpense()">
+                                    <option>Car Insurance</option>
+                                    <option>Phone Bill</option>
+                                    <option>Rent</option>
+                                    <option>Electricity</option>
+                                    <option>Water</option>
+                                    <option>Cable/Internet</option>
+                                    <option>Other</option><input id=other type=text class=form-control style=display:none;>
+                                </select>
+                                <label for=amount>Amount: </label>
+                                <input id=amount placeholder=$0.00 class=form-control>
+                            </div>
+                            <button id=addExpense class='btn-primary btn' style=float:right onclick="addExpense()">Add Expense</button>
+                            <div id=expenseList>
+                                
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -96,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <div class="card">
                         <div class="card-header">
                             Stock Market
