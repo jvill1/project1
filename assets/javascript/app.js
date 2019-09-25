@@ -44,7 +44,7 @@ function logExpenses(){
         $('#expenseList').append($('<p>').html('<button id='+i+' class=\'remThis btn-outline-danger btn btn-sm\'>X</button> '+expenses[i].name+': $'+parseInt(amount).toFixed(2)))
     }
 }
-$(document).on('click','.remThis',function(){
+$('#addExpense').on('click','.remThis',function(){
     expenses.splice($(this).attr('id'),1);
     logExpenses();
 })
