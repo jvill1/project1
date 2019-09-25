@@ -20,7 +20,14 @@
                         <div class="card-body" style='height:200px;'>
                             <div class="form-group">
                             <label for=income>What is your monthly income?</label>
-                            <input type=text placeholder='$...' id=income class=form-control>
+                            <input type=text placeholder='...' id=income class=form-control>
+                            <label for=frequency>How often do you get paid?</label>
+                            <select id=frequency class=form-control>
+                                <option>Weekly</option>
+                                <option selected>Biweekly</option>
+                                <option>Semi-monthly</option>
+                                <option>Monthly</option>
+                            </select>
                         </div>
                             
                         </div>
@@ -43,9 +50,12 @@
                             <div class="form-group">
                             <label for=expenses>What are some of your monthly expenses?</label>
                             <select id=expenses class='form-control'>
-                                <option> Car Insurance</option>
+                                <option>Car Insurance</option>
                                 <option>Phone Bill</option>
                                 <option>Rent</option>
+                                <option>Electricity</option>
+                                <option>Water</option>
+                                <option>Cable/Internet</option>
                                 <option>Other</option>
                             </select>
                             <label for=amount>Amount: </label>
