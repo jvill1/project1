@@ -19,10 +19,10 @@
                         <div class="card-header">
                             Income
                         </div>
-                        <div class="card-body" style='height:200px;'>
+                        <div class="card-body">
                             <div class="form-group">
                             <label for=income>What is your monthly income?</label>
-                            <input type=text placeholder='...' id=income class=form-control onkeyup="setIncome()">
+                            <input type=text placeholder='...' id=income class=form-control onkeyup="setIncome(); calcSavings()">
                             <label for=frequency>How often do you get paid?</label>
                             <select id=frequency class=form-control onchange="setIncome()">
                                 <option value=4.34524>Weekly</option>
@@ -34,11 +34,11 @@
                             
                         </div>
                     </div> 
-                    <div class="card"  style='margin-top:10px'>
+                    <div class="card">
                         <div class="card-header">
                             Remaining Balance
                         </div>
-                        <div class="card-body" style='height:80px;' id=moneyLeft>
+                        <div class="card-body" style='height:100px;' id=moneyLeft>
                            
                         </div>
                     </div> 
@@ -48,7 +48,7 @@
                         <div class="card-header">
                             Expenses
                         </div>
-                        <div class="card-body" style='height:340px;'>
+                        <div class="card-body">
                             <div class="form-group">
                                 <label for=expenses>What are some of your monthly expenses?</label>
                                 <select id=expenses class='form-control' onchange="otherExpense()">
@@ -74,7 +74,7 @@
             </div>
             <br>
             <div class="row justify-content-center">
-                <div class="col-md-5">
+                <div class="col-md-3">
                     <div class="card">
                         <div class="card-header">
                             Currency Exchange
@@ -98,7 +98,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-4">
+                    <!-- <div class="card">
+                        <div class="card-header">
+                            Entertainment Budget
+                        </div>
+                        <div class="card-body">
+
+                        </div>
+                    </div> -->
+                    <div class="card">
+                        <div class="card-header">
+                            Saving Percentage
+                        </div>
+                        <div class="card-body">
+                            <label for=savingSlider>How much do you want to save?</label>
+                            <input type=range id=savingSlider value=15 onchange='setSaveInput()'><input id=savingInput type=text placeholder="15" size=5 class=form-control style='max-width:20%;display:inline;' onkeyup='setSaveSlider()'>%
+                            <br><span id=theSavings></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
                     <div class="card">
                         <div class="card-header">
                             Stock Market

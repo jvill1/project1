@@ -1,5 +1,7 @@
 var totalExpenses=0;
 var expenses=[];
+var monthlyIncome;
+var moneyLeft;
 function otherExpense(){
     if($('#expenses').val()=='Other'){
         $('#other').css('display','inline')
@@ -10,8 +12,9 @@ function otherExpense(){
 }
 function setIncome(){
     if($('#income').val()!=''){
-        var monthlyIncome = $('#income').val()*$('#frequency').val();
-        $('#moneyLeft').text('You have $'+(monthlyIncome-totalExpenses).toFixed(2)+' left this month');
+        monthlyIncome = $('#income').val()*$('#frequency').val();
+        moneyLeft = (monthlyIncome-totalExpenses);
+        $('#moneyLeft').text('You have $'+moneyLeft.toFixed(2)+' left this month');
     }
     else{
         $('#moneyLeft').text('');
@@ -47,4 +50,24 @@ function logExpenses(){
 $(document).on('click','.remThis',function(){
     expenses.splice($(this).attr('id'),1);
     logExpenses();
+    setIncome();
 })
+function setSaveInput(){
+    $('#savingInput').val($('#savingSlider').val())
+    calcSavings()
+}
+function setSaveSlider(){
+    if($('#savingInput').val()!=''){
+    $('#savingSlider').val(parseInt($('#savingInput').val()))
+    
+    }
+    else{
+        $('#savingSlider').val('15');
+    }
+    calcSavings()
+}
+function calcSavings(){
+   var saveThis= (moneyLeft*($('#savingSlider').val()/100)).toFixed(2);
+    $('#theSavings').text('Put $'+saveThis+' into savings')
+    console.log(moneyLeft)
+}
