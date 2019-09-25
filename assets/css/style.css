@@ -30,4 +30,27 @@
     background: #00179c; 
   }
    
-  
+  input[type=range]{
+    margin-top:20px;
+    width:70%;
+    -webkit-appearance: none;
+    cursor:pointer;
+    margin-right:5%;
+  }
+  input[type=range]:focus{
+    outline:none;
+  }
+  input[type=range]::-webkit-slider-thumb{
+    background:white;
+    border:1px solid rgba(0,0,0,.8);
+    height:30px;
+    width:15px;
+    border-radius:10px;
+    margin:-12px -.5px;
+    -webkit-appearance: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track{
+    width:100%;
+    height:7px;
+    border:.1px solid rgba(0,0,0,.2);
+  }
