@@ -1,5 +1,10 @@
 var totalExpenses=0;
-var expenses=JSON.parse(localStorage.getItem('expenses'));
+if(JSON.parse(localStorage.getItem('expenses'))!=null){
+    var expenses=JSON.parse(localStorage.getItem('expenses'));
+}
+else{
+    var expenses=[]
+}
 console.log(expenses)
 var monthlyIncome=localStorage.getItem('income');;
 var moneyLeft;
