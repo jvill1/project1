@@ -9,16 +9,16 @@ console.log(expenses)
 var monthlyIncome=localStorage.getItem('income');;
 var moneyLeft;
 var savePercent = localStorage.getItem('savePercent');
-$('#savingSlider').val(savePercent)
-$('#savingInput').val(savePercent)
-$('#income').val((monthlyIncome/parseFloat($('#frequency').val())))
+$('#savingSlider').val(savePercent);
+$('#savingInput').val(savePercent);
+$('#income').val((monthlyIncome/parseFloat($('#frequency').val())));
 
 function otherExpense(){
     if($('#expenses').val()=='Other'){
-        $('#other').css('display','inline')
+        $('#other').css('display','inline');
     }
     else{
-        $('#other').css('display','none')
+        $('#other').css('display','none');
     }
 }
 function setIncome(){
