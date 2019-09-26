@@ -1,6 +1,9 @@
 .card-header {
     color: blue;
 }
+.card{
+  margin-top:20px;
+}
 #expenseList{
     padding:5px;
     height:150px; 
