@@ -3,12 +3,13 @@
         <title>Fudge It Budget</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel=stylesheet href=assets\css\style.css>
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     </head>
     <body>
         <script src=https://code.jquery.com/jquery-3.4.1.js></script>
-            <nav class="navbar navbar-dark bg-primary">
-                    <a class="navbar-brand" href="#" style=font-size:40px><img src="assets/images/logo1.PNG" width="72px"> Fudge It Budget</a>
-                  </nav>
+        <nav class="navbar navbar-dark" style="background-color: #4898EE">
+                <a class="navbar-brand" href="#" style="font-size:35px; font-family: 'Comfortaa'"><img src="assets/images/logo1.PNG" width="50px"> fudge it budget</a>
+              </nav>
         <div class="container">
             
                 
@@ -32,7 +33,7 @@
                                 </select>
                                 
                             </div>
-                            <button id=setIncome onclick="setIncome(); calcSavings()" class='btn btn-primary'>Save Income</button>
+                            <button id=setIncome onclick="setIncome(); calcSavings()" class='btn btn-primary' style="background-color: #4898EE;">Save Income</button>
                         </div>
                     </div> 
                     <div class="card">
@@ -64,7 +65,7 @@
                                 <label for=amount>Amount: </label>
                                 <input id=amount placeholder=$0.00 class=form-control>
                             </div>
-                            <button id=addExpense class='btn-primary btn' style=float:right onclick="addExpense()">Add Expense</button>
+                            <button id=addExpense class='btn-primary btn' style="float:right; background-color: #4898EE" onclick="addExpense()">Add Expense</button>
                             <div id=expenseList>
                                 
                             </div>
