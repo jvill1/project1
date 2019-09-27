@@ -4,7 +4,6 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel=stylesheet href=assets\css\style.css>
         <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     </head>
     <body>
         <script src=https://code.jquery.com/jquery-3.4.1.js></script>
@@ -105,43 +104,18 @@
                         </div>
                     </div>
                 </div>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
                 <div class="col-lg-5">
                     <div class="card">
                         <div class="card-header">
                             Stock Market
                         </div>
-                        <div class="card-body" id="stock-info">
-                            <form id="stock-form">
-                                <label for="stock-input">Choose Your Stock</label>
-                                <input type="text" id="stock-input"><br>
-                                <input id="select-stock" type="submit" value="GO!">
-
-                                <h4>View Stock Preforamnce</h4>
-                                <label for=Time-Period>Time Period</label>
-                                <select id=Time-Period class='form-control' onchange="changeGraph()">
-                                    <option>Last Week</option>
-                                    <option>Last Year</option><input id=Last-Year type=text class=form-control >
-                              </form>
-                            
-                              <p id="info"></p>
-                              <div class="chart-container" id="one" style="position: relative; height:10vh; width:20vw">
-                                <canvas id="chart"></canvas>
-                              </div>
-                            
-                              <div class="chart-container" id="two" style="position: relative; height:10vh; width:20vw">
-                                <canvas id="chart-two"></canvas>
-                              </div>
-
-
-                        </div>
+                        <div class="card-body"></div>
                     </div>
                 </div>
             </div>
         </div>
 
         <script src="assets/javascript/app.js"></script>  
-        <script src="assets\javascript\app2.js"></script>
 
     </body>
 </html>
