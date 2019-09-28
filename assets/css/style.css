@@ -3,6 +3,7 @@
 }
 .card{
   margin-top:20px;
+  margin-bottom:50px;
 }
 #expenseList{
     padding:5px;
@@ -67,6 +68,42 @@
     height:7px;
     border:.1px solid rgba(0,0,0,.2);
   }
+ /* Ticker animation---------------------------- */
+ @keyframes ticker {
+  0% { transform: translate3d(30%, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+.tcontainer{
+  width: 100%;
+  overflow: hidden;
+  position:absolute;
+  bottom:0;
+  left:0;
+  border-radius:0 0 3.5px 3.5px;
+  color:#eee;
+}
+.ticker-wrap {
+  width: 100%;
+  right: 0;
+  background-color: #eee;
+}
+.ticker-move {
+  display: inline-block;
+  white-space: nowrap;
+  left:-100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  /* animation-duration: 25s; */
+}
+.ticker-move:hover{
+  animation-play-state: paused;
+}
+.ticker-item{
+  display: inline-block;
+  padding: 0 2rem;
+  color:#eee;
+}
 #chart-two{
   position: relative;
   bottom: 150px;
@@ -99,4 +136,18 @@
 }
 #stockList::-webkit-scrollbar {
   width: 10px;
+}
+.footer{
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  background:#fff;
+  height:35px;
+}
+#info{
+  margin-bottom:40px;
+}
+.chart-container{
+  margin:1px;
 }
