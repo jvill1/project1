@@ -94,7 +94,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: ticker;
-  animation-duration: 25s;
+  /* animation-duration: 25s; */
 }
 .ticker-move:hover{
   animation-play-state: paused;
@@ -143,4 +143,11 @@
   bottom:0;
   width:100%;
   background:#fff;
+  height:35px;
+}
+#info{
+  margin-bottom:40px;
+}
+.chart-container{
+  margin:1px;
 }

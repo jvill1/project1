@@ -137,7 +137,7 @@ function stockDetails(stockSymbol) {
 
 
 $("#select-stock").on("click", function (event) {
-
+  displayFinanceInfo($('#stock-input').val());
   event.preventDefault();
 
   var stockSymbol = $("#stock-input").val().trim();

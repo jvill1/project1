@@ -3,14 +3,14 @@ function displayFinanceInfo(stockSymbol) {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://bloomberg-market-and-financial-news.p.rapidapi.com/stock/get-statistics?id=aapl%3Aus",
+        "url": "https://bloomberg-market-and-financial-news.p.rapidapi.com/stock/get-statistics?id="+ stockSymbol+"%3Aus",
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "bloomberg-market-and-financial-news.p.rapidapi.com",
             "x-rapidapi-key": "049282e5b3mshe9b4061aabe8defp165a04jsn98720904a3d7"
         }
     }
-    
+
     $.ajax(settings).done(function (response) {
         console.log(response);
         $('.ticker-item').css('color','#4898EE')
@@ -23,6 +23,10 @@ function displayFinanceInfo(stockSymbol) {
         aDiv.append(response.result[0].table[i].name+": "+response.result[0].table[i].value);
        }
     }
+    console.log(aDiv.text().length);
+    console.log(aDiv)
+    var speed=aDiv.text().length*.05;
+    $('.ticker-move').css('animation-duration', speed+"s")
     $("#tick-scroll").html(' ')
     $("#tick-scroll").html(aDiv)
         
@@ -31,7 +35,7 @@ function displayFinanceInfo(stockSymbol) {
 });
 
     };
-displayFinanceInfo();
+
 function saveStock(stockSymbol) {
     var queryURLTwo = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-analysis?symbol=" + stockSymbol
     var settings = {
