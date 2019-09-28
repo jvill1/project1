@@ -67,3 +67,7 @@
     height:7px;
     border:.1px solid rgba(0,0,0,.2);
   }
+#chart-two{
+  position: relative;
+  bottom: 150px;
+}
