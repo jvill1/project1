@@ -9,7 +9,7 @@ function stockYear(stockSymbol) {
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-      "x-rapidapi-key": "ded0697cd3msh050b2527bad8a96p16ea07jsn43f474e17f08"
+      "x-rapidapi-key": "98c0bc8010mshe66d581fddfbb96p1cfc58jsn0ab8541f5fa2"
     }
   }
   $.ajax(settings).done(function (response) {
@@ -67,7 +67,7 @@ function stockWeek(stockSymbol) {
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-      "x-rapidapi-key": "ded0697cd3msh050b2527bad8a96p16ea07jsn43f474e17f08"
+      "x-rapidapi-key": "98c0bc8010mshe66d581fddfbb96p1cfc58jsn0ab8541f5fa2"
     }
   }
 
@@ -119,7 +119,7 @@ function stockDetails(stockSymbol) {
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-      "x-rapidapi-key": "ded0697cd3msh050b2527bad8a96p16ea07jsn43f474e17f08"
+      "x-rapidapi-key": "98c0bc8010mshe66d581fddfbb96p1cfc58jsn0ab8541f5fa2"
     }
   }
 
