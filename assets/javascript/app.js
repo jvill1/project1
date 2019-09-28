@@ -102,7 +102,7 @@ function logExpenses(stuff){
     }
     logEntBudget();
 }
-$('#addExpense').on('click','.remThis',function(){
+$(document).on('click','.remThis',function(){
     expenses.splice($(this).attr('id'),1);
     logExpenses();
     setIncome();
