@@ -13,7 +13,7 @@ function displayFinanceInfo(stockSymbol) {
     
     $.ajax(settings).done(function (response) {
         console.log(response);
-
+        $('.ticker-item').css('color','#4898EE')
     var aDiv = $('<div>')
     for (var i=0; i < response.result[0].table.length; i++){
        if(i!=response.result[0].table.length-1){
@@ -23,6 +23,7 @@ function displayFinanceInfo(stockSymbol) {
         aDiv.append(response.result[0].table[i].name+": "+response.result[0].table[i].value);
        }
     }
+    $("#tick-scroll").html(' ')
     $("#tick-scroll").html(aDiv)
         
 

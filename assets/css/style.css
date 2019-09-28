@@ -1,5 +1,5 @@
 .card-header {
-    color: blue;
+    color: #4898EE;
 }
 .card{
   margin-top:20px;
@@ -11,9 +11,19 @@
     background:rgb(240,240,240); 
     border-radius:7px; 
     overflow-y:scroll;
+    position:absolute;
+    bottom:30px;
+    min-height:180px;
 }
+
+
 ::-webkit-scrollbar {
-    width: 15px;
+  width: 0px;
+}
+
+
+#expenseList::-webkit-scrollbar {
+    width: 10px;
   }
   
  
@@ -24,18 +34,18 @@
    
 
   ::-webkit-scrollbar-thumb {
-    background: rgb(0, 23, 230); 
+    background: #4898EE; 
     border-radius: 7px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #00179c; 
+    background: #4898EE; 
   }
    
   input[type=range]{
     margin-top:20px;
-    width:70%;
+    width:65%;
     -webkit-appearance: none;
     cursor:pointer;
     margin-right:5%;
@@ -59,12 +69,17 @@
   }
  /* Ticker animation---------------------------- */
  @keyframes ticker {
-  0% { transform: translate3d(50%, 0, 0); }
+  0% { transform: translate3d(30%, 0, 0); }
   100% { transform: translate3d(-100%, 0, 0); }
 }
 .tcontainer{
   width: 100%;
   overflow: hidden;
+  position:absolute;
+  bottom:0;
+  left:0;
+  border-radius:0 0 3.5px 3.5px;
+  color:#eee;
 }
 .ticker-wrap {
   width: 100%;
@@ -86,5 +101,5 @@
 .ticker-item{
   display: inline-block;
   padding: 0 2rem;
-  color:#4898ee;
+  color:#eee;
 }
