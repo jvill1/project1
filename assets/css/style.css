@@ -3,6 +3,7 @@
 }
 .card{
   margin-top:20px;
+  margin-bottom:50px;
 }
 #expenseList{
     padding:5px;
@@ -135,4 +136,11 @@
 }
 #stockList::-webkit-scrollbar {
   width: 10px;
+}
+.footer{
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  background:#fff;
 }
