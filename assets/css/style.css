@@ -3,7 +3,7 @@
 }
 .card{
   margin-top:20px;
-  margin-bottom:50px;
+ 
 }
 #expenseList{
     padding:5px;
@@ -16,13 +16,19 @@
     bottom:30px;
     min-height:180px;
 }
+<<<<<<< HEAD
+::-webkit-scrollbar{
+  width:0;
+}
+=======
 
+::-webkit-scrollbar{
+  width:0;
 
-::-webkit-scrollbar {
-  width: 0px;
 }
 
 
+>>>>>>> 4476085ee9d1560e36d5c59b6f0d651369d542ab
 #expenseList::-webkit-scrollbar {
     width: 10px;
   }
@@ -150,4 +156,7 @@
 }
 .chart-container{
   margin:1px;
+}
+#stock-market{
+  margin-bottom:50px;
 }
