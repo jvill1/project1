@@ -11,7 +11,17 @@
     background:rgb(240,240,240); 
     border-radius:7px; 
     overflow-y:scroll;
+    position:absolute;
+    bottom:30px;
+    min-height:180px;
 }
+
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+
 #expenseList::-webkit-scrollbar {
     width: 10px;
   }
@@ -35,7 +45,7 @@
    
   input[type=range]{
     margin-top:20px;
-    width:70%;
+    width:65%;
     -webkit-appearance: none;
     cursor:pointer;
     margin-right:5%;

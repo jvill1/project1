@@ -146,7 +146,7 @@ function setEntertainmentBudget(){
 }
 $('#entertainment').val(localStorage.getItem('entertainment'))
 function logEntBudget(){
-    $('#leftOfEnter').text('You have $'+($('#entertainment').val()-totalOfEntertainment).toFixed(2)+' left in Entertainment Budget')
+    $('#leftOfEnter').text('You have $'+($('#entertainment').val()-totalOfEntertainment).toFixed(2)+' left in your Entertainment Budget')
 }
 logExpenses();
 printIncome();

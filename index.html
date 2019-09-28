@@ -20,127 +20,159 @@
                 
             <br>
             <div class="row justify-content-center  ">
-                <div class="col-lg-4">
-                    <div class="card">
-                        <div class="card-header">
-                            Income
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    Income
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for=income>What is your income per paycheck?</label>
+                                        <input type=text placeholder='...' id=income class=form-control>
+                                        <label for=frequency>How often do you get paid?</label>
+                                        <select id=frequency class=form-control onchange="setIncome()">
+                                            <option value=4.34524>Weekly</option>
+                                            <option selected value=2.17262>Biweekly</option>
+                                            <option value=2>Semi-monthly</option>
+                                            <option value=1>Monthly</option>
+                                        </select>
+                                        
+                                    </div>
+                                    <button id=setIncome onclick="setIncome(); calcSavings()" class='btn btn-primary'>Save Income</button>
+                                </div>
+                            </div> 
                         </div>
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for=income>What is your income per paycheck?</label>
-                                <input type=text placeholder='...' id=income class=form-control>
-                                <label for=frequency>How often do you get paid?</label>
-                                <select id=frequency class=form-control onchange="setIncome()">
-                                    <option value=4.34524>Weekly</option>
-                                    <option selected value=2.17262>Biweekly</option>
-                                    <option value=2>Semi-monthly</option>
-                                    <option value=1>Monthly</option>
-                                </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    Remaining Balance
+                                </div>
+                                <div class="card-body"  id=moneyLeft>
                                 
+
+                                </div>
+                            </div> 
+
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-lg-12">
+                                    <div class="card">
+                                            <div class="card-header">
+                                                Saving Percentage
+                                            </div>
+                                            <div class="card-body">
+                                                <label for=savingSlider>How much do you want to save?</label>
+                                                <input type=range id=savingSlider value=15 onchange="setSaveInput();  "><input id=savingInput type=text placeholder="15" size=5 class=form-control style='text-align:right;max-width:20%;display:inline;' onkeyup='setSaveSlider()'>%
+                                                <br><span id=theSavings></span>
+                                            </div>
+                                        </div>
                             </div>
-                            <button id=setIncome onclick="setIncome(); calcSavings()" class='btn btn-primary' style="background-color: #4898EE;">Save Income</button>
-                        </div>
-                    </div> 
-                    <div class="card">
-                        <div class="card-header">
-                            Remaining Balance
-                        </div>
-                        <div class="card-body"  id=moneyLeft>
-                           
-                        </div>
-                    </div> 
+                    </div>
                 </div>
-                <div class="col-lg-8">
-                    <div class="card">
-                        <div class="card-header">
-                            Expenses
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    Expenses
+                                </div>
+                                <div class="card-body" style='height:420px'>
+                                    <div class="form-group">
+                                        <label for=expenses>What are some of your monthly expenses?</label>
+                                        <select id=expenses class='form-control' onchange="otherExpense()">
+                                            <option>Car Insurance</option>
+                                            <option>Phone Bill</option>
+                                            <option>Rent</option>
+                                            <option>Electricity</option>
+                                            <option>Water</option>
+                                            <option>Cable/Internet</option>
+                                            <option>Other</option><input id=other type=text class=form-control style=display:none;>
+                                        </select>
+                                        <label for=amount>Amount: </label>
+                                        <input id=amount placeholder=$0.00 class=form-control>
+                                    </div>
+                                    <button id=addExpense class='btn-primary btn' style=float:right onclick="addExpense()">Add Expense</button>
+                                    <div id=expenseList>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body" >
-                            <div class="form-group">
-                                <label for=expenses>What are some of your monthly expenses?</label>
-                                <select id=expenses class='form-control' onchange="otherExpense()">
-                                    <option>Car Insurance</option>
-                                    <option>Phone Bill</option>
-                                    <option>Rent</option>
-                                    <option>Electricity</option>
-                                    <option>Water</option>
-                                    <option>Cable/Internet</option>
-                                    <option>Other</option><input id=other type=text class=form-control style=display:none;>
-                                </select>
-                                <label for=amount>Amount: </label>
-                                <input id=amount placeholder=$0.00 class=form-control>
-                            </div>
-                            <button id=addExpense class='btn-primary btn' style="float:right; background-color: #4898EE" onclick="addExpense()">Add Expense</button>
-                            <div id=expenseList>
-                                
-                            </div>
+                        <div class="col-lg-4">
+
+                                <div class="card">
+                                        <div class="card-header">
+                                            Entertainment Budget
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <label for=entertainment>How much do you want your monthly entertainment budget to be?</label>
+                                                <input type=text id=entertainment class="form-control" value="100">
+                                            </div>
+                                            <button onclick="setEntertainmentBudget(); logEntBudget()" class="btn btn-primary">Set Budget</button><br><br>
+                                            <p id=leftOfEnter></p>
+                                            <div class="form-group">
+                                                <label for=purchases>Log entertainment purchases:</label>
+                                                <input type=text class=form-control id=purchases placeholder="Hot Dog $20">
+                                            </div>
+                                            
+                                            <button onclick="addExpense('entertainment')" class="btn btn-primary">Add Purchase</button><br>
+                                            
+                                        </div>
+                                    </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                        
                             
+                        </div>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    Stock Market
+                                </div>
+                                <div class="card-body" id="stock-info">
+                                    <div id="stock-form" class='form-group'>
+                                        <label for="stock-input">Choose Your Stock</label>
+                                        <input type="text" id="stock-input" class='form-control'><br>
+                                        <input id="select-stock" type="submit" value="GO!" class='btn btn-primary'>
+                                        <br><br>
+                                        <h4>View Stock Preforamnce</h4>
+                                        <label for=Time-Period>Time Period</label>
+                                        <select id=Time-Period class='form-control' onchange="changeGraph()">
+                                            <option>Last Week</option>
+                                            <option>Last Year</option><input id=Last-Year type=text class=form-control >
+                                        </div>
+                                    
+                                    <p id="info"></p>
+                                    <div class="chart-container" id="one" style="position: relative; height:10vh; width:20vw">
+                                        <canvas id="chart"></canvas>
+                                    </div>
+                                    
+                                    <div class="chart-container" id="two" style="position: relative; height:10vh; width:20vw">
+                                        <canvas id="chart-two"></canvas>
+                                    </div>
+        
+        
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <br>
             <div class="row justify-content-center">
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-header">
-                            Entertainment Budget
-                        </div>
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for=entertainment>How much do you want your monthly entertainment budget to be?</label>
-                                <input type=text id=entertainment class="form-control" placeholder="100">
-                                <label for=purchases>Log entertainment purchases:</label>
-                                <input type=text class=form-control id=purchases placeholder="Hot Dog $20">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    
-                    <div class="card">
-                        <div class="card-header">
-                            Saving Percentage
-                        </div>
-                        <div class="card-body">
-                            <label for=savingSlider>How much do you want to save?</label>
-                            <input type=range id=savingSlider value=15 onchange="setSaveInput(); "><input id=savingInput type=text placeholder="15" size=5 class=form-control style='text-align:right;max-width:20%;display:inline;' onkeyup='setSaveSlider()'>%
-                            <br><span id=theSavings></span>
-                        </div>
-                    </div>
-                </div>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                <div class="col-lg-5">
-                    <div class="card">
-                        <div class="card-header">
-                            Stock Market
-                        </div>
-                        <div class="card-body" id="stock-info">
-                            <form id="stock-form">
-                                <label for="stock-input">Choose Your Stock</label>
-                                <input type="text" id="stock-input"><br>
-                                <input id="select-stock" type="submit" value="GO!">
-
-                                <h4>View Stock Preforamnce</h4>
-                                <label for=Time-Period>Time Period</label>
-                                <select id=Time-Period class='form-control' onchange="changeGraph()">
-                                    <option>Last Week</option>
-                                    <option>Last Year</option><input id=Last-Year type=text class=form-control >
-                              </form>
-                            
-                              <p id="info"></p>
-                              <div class="chart-container" id="one" style="position: relative; height:10vh; width:20vw">
-                                <canvas id="chart"></canvas>
-                              </div>
-                            
-                              <div class="chart-container" id="two" style="position: relative; height:10vh; width:20vw">
-                                <canvas id="chart-two"></canvas>
-                              </div>
-
-
-                        </div>
-                    </div>
-                </div>
+                
+                
             </div>
         </div>
 
