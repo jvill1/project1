@@ -1,5 +1,5 @@
 .card-header {
-    color: blue;
+    color: #4898EE;
 }
 .card{
   margin-top:20px;
@@ -15,9 +15,8 @@
     bottom:30px;
     min-height:180px;
 }
-
-::-webkit-scrollbar {
-  width: 0px;
+::-webkit-scrollbar{
+  width:0;
 }
 #expenseList::-webkit-scrollbar {
     width: 10px;
@@ -31,13 +30,13 @@
    
 
   ::-webkit-scrollbar-thumb {
-    background: rgb(0, 23, 230); 
+    background: #4898EE; 
     border-radius: 7px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #00179c; 
+    background: #4898EE; 
   }
    
   input[type=range]{
