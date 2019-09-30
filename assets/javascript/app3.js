@@ -36,8 +36,8 @@ function displayFinanceInfo(stockSymbol) {
 
     };
 
-function saveStock(stockSymbol) {
-    var queryURLTwo = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-analysis?symbol=" + stockSymbol
+function saveStock(stock) {
+    var queryURLTwo = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-analysis?symbol=" + myStocks[stock].stockSymbol
     var settings = {
       "async": true,
       "crossDomain": true,
@@ -49,30 +49,51 @@ function saveStock(stockSymbol) {
       }
     }
   
-    $.ajax(settings).done(function (response) {
+    $.ajax(settings).done(function (response,) {
       console.log(response);
-        
+      console.log(JSON.stringify(myStocks)+'<br>'+stock)
 
      var currentP =  response.financialData.currentPrice.fmt;
-     var purchasePrice = $("#purchasePrice").val().trim();
-     var sharesOwned = $("#sharesOwned").val().trim();
-     var netGain =(currentP * sharesOwned)-(sharesOwned*purchasePrice);
-      $("#stockList").append(stockSymbol + " netgain = "+ netGain + "<br>");
+     
+     var netGain =(currentP * myStocks[stock].numShares)-(myStocks[stock].numShares*myStocks[stock].purchasePrice);
+      $("#stockList").append('<button id='+stock+' class=\'btn btn-outline-danger killStock\'>X</button> '+myStocks[stock].stockSymbol + " Netgain: "+ netGain.toFixed(2) + "<br>");
     
   
   
     });
   
   }
+if(JSON.parse(localStorage.getItem('myStocks'))!=null){
+  var myStocks = JSON.parse(localStorage.getItem('myStocks'));
+}
+else{
+  var myStocks = [];
+}
+  $("#saveStock").on("click", function(){
+    var symb= $("#stocksOwned").val().trim()
+    var shares = $("#sharesOwned").val().trim()
+    var price =$("#purchasePrice").val().trim()
+    var aStock = {'stockSymbol':symb, 'numShares':shares, 'purchasePrice':price}
+    myStocks.push(aStock);
+    localStorage.setItem('myStocks',JSON.stringify(myStocks));
+    addStocks();
+  } );
 
-  $("#saveStock").on("click", function (event) {
+$(document).on('click','.killStock',function(){
+  myStocks.splice($(this).attr('id'),1);
+  localStorage.setItem('myStocks',JSON.stringify(myStocks));
+  console.log(JSON.stringify(myStocks)+'<br>'+stock)
+   addStocks();
+})  
 
-    event.preventDefault();
-  
-    var stockSymbol = $("#stocksOwned").val().trim();
-  
-  saveStock(stockSymbol);
-   
+function addStocks () {
 
-  });
   
+$("#stockList").html('');
+for(stock in myStocks){
+
+saveStock(stock);
+}
+
+}
+$(document).ready(addStocks());
