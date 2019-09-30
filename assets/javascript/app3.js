@@ -1,3 +1,4 @@
+//Ticker function---------------------------//
 function displayFinanceInfo(stockSymbol) {
 
     var settings = {
@@ -35,6 +36,8 @@ function displayFinanceInfo(stockSymbol) {
 });
 
     };
+
+//Stock Market widget-----------------------------------//
 
 function saveStock(stockSymbol) {
     var queryURLTwo = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-analysis?symbol=" + stockSymbol
