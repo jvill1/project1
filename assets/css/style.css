@@ -16,11 +16,6 @@
     bottom:30px;
     min-height:180px;
 }
-<<<<<<< HEAD
-::-webkit-scrollbar{
-  width:0;
-}
-=======
 
 ::-webkit-scrollbar{
   width:0;
@@ -28,7 +23,6 @@
 }
 
 
->>>>>>> 4476085ee9d1560e36d5c59b6f0d651369d542ab
 #expenseList::-webkit-scrollbar {
     width: 10px;
   }
@@ -150,6 +144,7 @@
   width:100%;
   background:#fff;
   height:35px;
+  text-align:center;
 }
 #info{
   margin-bottom:40px;
