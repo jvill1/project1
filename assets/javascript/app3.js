@@ -1,3 +1,4 @@
+//Ticker function---------------------------//
 function displayFinanceInfo(stockSymbol) {
 
     var settings = {

@@ -125,10 +125,11 @@ function stockDetails(stockSymbol) {
 
   $.ajax(settings).done(function (response) {
     console.log(response);
-
+    $("#info").append("Company Name: " + "<b>"+ response.quoteType.longName + "</b>" + "<br>");
     $("#info").append("Current Price: " + response.financialData.currentPrice.fmt + "<br>");
     $("#info").append("Volume Traded Today: " + response.summaryDetail.volume.longFmt + "<br>");
     $("#info").append("Market Cap: " + response.summaryDetail.marketCap.fmt + "<br>");
+    
 
 
   });
