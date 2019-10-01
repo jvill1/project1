@@ -144,16 +144,20 @@
   bottom:0;
   width:100%;
   background:#fff;
-  height:45px;
-
+  height:35px;
+  font-size: 12px;
   text-align: center;
   clear: both;
   display: flex;
   justify-content: space-evenly;
-  align-content: space-between
-
-
+  align-content: space-between;
+  color: grey;
 }
+
+.list {
+  padding-top: 5px;
+}
+
 #info{
   margin-bottom:40px;
 }
