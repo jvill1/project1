@@ -158,11 +158,11 @@
   margin-bottom:40px;
 }
 .chart-container{
-  margin:1px;
+  margin:0 3px;
 }
 #stock-market{
   margin-bottom:50px;
 }
-.stockCard{
+#stockCard{
   margin:10px 5px;
 }
