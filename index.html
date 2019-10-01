@@ -32,7 +32,7 @@
                                         <label for=income>What is your income per paycheck?</label>
                                         <input type=text placeholder='...' id=income class=form-control>
                                         <label for=frequency>How often do you get paid?</label>
-                                        <select id=frequency class=form-control onchange="setIncome()">
+                                        <select id=frequency class=form-control onchange="setIncome(); calcSavings()">
                                             <option value=4.34524>Weekly</option>
                                             <option selected value=2.17262>Biweekly</option>
                                             <option value=2>Semi-monthly</option>
@@ -40,7 +40,7 @@
                                         </select>
                                         
                                     </div>
-                                    <button id=setIncome onclick="setIncome(); calcSavings()" class='btn btn-primary'>Save Income</button>
+                                    <button id=setIncome onclick="setIncome(); calcSavings();" class='btn btn-primary'>Save Income</button>
                                 </div>
                             </div> 
                         </div>
