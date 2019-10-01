@@ -1,3 +1,4 @@
+//Ticker function---------------------------//
 function displayFinanceInfo(stockSymbol) {
 
     var settings = {
@@ -45,7 +46,7 @@ function saveStock(stock) {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-        "x-rapidapi-key": "98c0bc8010mshe66d581fddfbb96p1cfc58jsn0ab8541f5fa2"
+        "x-rapidapi-key": "7a664664b9msh9ab60b50670f375p1962c5jsncba19bed257a"
       }
     }
   
