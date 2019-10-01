@@ -11,6 +11,9 @@ if(localStorage.getItem('entertainment')!=null){
 else{
     entertainmentBudget=$('#entertainment').val();
 }
+if(localStorage.getItem('frequency')!=null){
+    $('#frequency').val(localStorage.getItem('frequency'));
+}
 console.log(expenses)
 var monthlyIncome=localStorage.getItem('income');;
 
@@ -18,7 +21,7 @@ var moneyLeft;
 var savePercent = localStorage.getItem('savePercent');
 $('#savingSlider').val(savePercent);
 $('#savingInput').val(savePercent);
-$('#income').val((monthlyIncome/parseFloat($('#frequency').val())));
+$('#income').val((monthlyIncome/parseFloat($('#frequency').val())).toFixed(2));
 var totalOfEntertainment=0;
 var saveThis=((monthlyIncome*(savePercent/100)).toFixed(2));
 function otherExpense(){
@@ -35,6 +38,7 @@ function setIncome(){
         
         printIncome();
         localStorage.setItem('income',monthlyIncome);
+        localStorage.setItem('frequency', $('#frequency').val());
     }
     else{
         $('#moneyLeft').text('');

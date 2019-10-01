@@ -144,7 +144,7 @@
   bottom:0;
   width:100%;
   background:#fff;
-  height:35px;
+  height:45px;
 
   text-align: center;
   clear: both;
@@ -158,8 +158,11 @@
   margin-bottom:40px;
 }
 .chart-container{
-  margin:1px;
+  margin:0 3px;
 }
 #stock-market{
   margin-bottom:50px;
+}
+#stockCard{
+  margin:10px 5px;
 }
