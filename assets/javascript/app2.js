@@ -146,6 +146,8 @@ $("#select-stock").on("click", function (event) {
   $("#chart").empty();
   $("#chart-two").empty();
   $("#info").empty();
+  $("#chart-two").css('top','20px');
+  $("#chart").css('top','-20px')
   stockDetails(stockSymbol);
   stockWeek(stockSymbol);
   stockYear(stockSymbol);
