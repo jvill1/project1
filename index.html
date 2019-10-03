@@ -32,7 +32,7 @@
                                         <label for=income>What is your income per paycheck?</label>
                                         <input type=text placeholder='...' id=income class=form-control>
                                         <label for=frequency>How often do you get paid?</label>
-                                        <select id=frequency class=form-control onchange="setIncome(); calcSavings()">
+                                        <select id=frequency class=form-control onchange="setIncome(); calcSavings();setIncome();">
                                             <option value=4.34524>Weekly</option>
                                             <option selected value=2.17262>Biweekly</option>
                                             <option value=2>Semi-monthly</option>
@@ -166,12 +166,12 @@
                                             <option>Last Year</option><input id=Last-Year type=text class=form-control >
                                         </div>
                                     
-                                    <p id="info"></p>
-                                    <div class="chart-container" id="one" style="position: relative; height:20vh; width:25vw">
+                                    <p id="info" style="margin:1px;"></p>
+                                    <div class="chart-container" id="one" style="position:relative;">
                                         <canvas id="chart"></canvas>
                                     </div>
                                     
-                                    <div class="chart-container" id="two" style="position: relative; height:20vh; width:25vw">
+                                    <div class="chart-container" id="two" style="width:100%; margin:0 0 -100%">
                                         <canvas id="chart-two"></canvas>
                                     </div>
                                 </div>
