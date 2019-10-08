@@ -153,28 +153,31 @@
                                                 </div>
                                               </div>
                                         <div class="row"id = "">
-                                                <div class="col-lg-6">
-                                    <div id="stock-form" class='form-group'>
-                                        <label for="stock-input">Choose Your Stock</label>
-                                        <input type="text" id="stock-input" class='form-control'><br>
-                                        <input id="select-stock" type="submit" value="GO!" class='btn btn-primary'>
-                                        <br><br>
-                                        <h4>View Stock Performance</h4>
-                                        <label for=Time-Period>Time Period</label>
-                                        <select id=Time-Period class='form-control' onchange="changeGraph()">
-                                            <option>Last Week</option>
-                                            <option>Last Year</option><input id=Last-Year type=text class=form-control >
-                                        </div>
-                                    
-                                    <p id="info" style="margin:1px;"></p>
-                                    <div class="chart-container" id="one" style="position:relative;">
-                                        <canvas id="chart"></canvas>
-                                    </div>
-                                    
-                                    <div class="chart-container" id="two" style="width:100%; margin:0 0 -100%">
-                                        <canvas id="chart-two"></canvas>
-                                    </div>
-                                </div>
+                                                <div class="col-lg-6" style=height:700px>
+                                                    <div class="container">
+                                                    <div id="stock-form" class='form-group'>
+                                                        <label for="stock-input">Choose Your Stock</label>
+                                                        <input type="text" id="stock-input" class='form-control'><br>
+                                                        <input id="select-stock" type="submit" value="GO!" class='btn btn-primary'>
+                                                        <br><br>
+                                                        <h4>View Stock Performance</h4>
+                                                        <label for=Time-Period>Time Period</label>
+                                                        <select id=Time-Period class='form-control' onchange="changeGraph()">
+                                                            <option>Last Week</option>
+                                                            <option>Last Year</option><input id=Last-Year type=text class=form-control >
+                                                    </div>
+                                                    
+                                                        <p id="info" style="margin:1px;"></p>
+                                                        <div class="chart-container" id="one" style="position:relative;">
+                                                            <canvas id="chart"></canvas>
+                                                        </div>
+                                                    
+                                                        <div class="chart-container" id="two" style="width:100%; margin:0 0 -100%">
+                                                            <canvas id="chart-two"></canvas>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
                                         <div class="col-lg-6">
                                             <div class="card" id=stockCard>
                                                 <div class="card-header" >
